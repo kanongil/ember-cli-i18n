@@ -15,7 +15,8 @@ export default function t() {
 
   var result = get(locale, path);
 
-  result = fmt(result, args);
+  if (result)
+    result = fmt(result, args);
 
   return result;
 }
